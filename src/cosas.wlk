@@ -29,9 +29,39 @@ object plancha {
 }
 
 object kgMilangas {
-	method precio() { return 1200 }
+	var property precio=260
+	
+	method esComida() { return true }
+	method esElectrodomestico() { return false }	
+}
+
+object salsaTomate {
+	var property precio=90
+	
+	method esComida() { return true }
+	method esElectrodomestico() { return false }	
+}
+
+object microondas {
+	method precio() { return 4200 }
 	method esComida() { return false }
-	method esElectrodomestico() { return true }	
+	method esElectrodomestico() { return true }
+}
+
+object kgCebolla {
+	method precio() { return 25 }
+	method esComida() { return true }
+	method esElectrodomestico() { return false }
+}
+
+object dolar {
+	var property cotizacion=60
+}
+
+object compu {
+	method precio() { return 500*dolar.cotizacion() }
+	method esComida() { return false }
+	method esElectrodomestico() { return true }
 }
 
 
