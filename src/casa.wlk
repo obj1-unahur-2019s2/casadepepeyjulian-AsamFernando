@@ -32,7 +32,39 @@ object casaDePepeYJulian {
 		//return lista.filter {deseo=>not cosas.contains(deseo)}
 	}
 	method faltaComida() {
-		cosas.filter ( {cosa => cosa.esComida() }).size()>2
+		return cosas.filter( {cosa => cosa.esComida() }).size()>2
 	}
-	
+	method gastoEnComida() {
+		return cosas.filter({ cosa => cosa.esComida()}).sum({ cosa => cosa.precio()})
+	}
+	method hayElectrodomesticosBaratos() {
+		return cosas.any({ cosa => cosa.precio()<3000})
+	}
+	method preciosDeElectrodomesticos() {
+		return cosas.filter({ cosa => cosa.esElectrodomestico() }).map({ cosa => cosa.precio() })
+	}
+	method niverDeAumento() {
+		return cosas.last().precio()>=cosas.first().precio()*2
+	}
+	method primeraComidaComprada() {
+		return cosas.find({ cosa => cosa.esComida() })
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

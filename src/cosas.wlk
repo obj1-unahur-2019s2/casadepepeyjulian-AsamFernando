@@ -30,14 +30,12 @@ object plancha {
 
 object kgMilangas {
 	var property precio=260
-	
 	method esComida() { return true }
 	method esElectrodomestico() { return false }	
 }
 
 object salsaTomate {
 	var property precio=90
-	
 	method esComida() { return true }
 	method esElectrodomestico() { return false }	
 }
@@ -62,6 +60,34 @@ object compu {
 	method precio() { return 500*dolar.cotizacion() }
 	method esComida() { return false }
 	method esElectrodomestico() { return true }
+}
+
+object packComida {
+	var property comida=tiraDeAsado
+	var property aderezo=salsaTomate
+	
+	method precio() {
+		return comida.precio()+aderezo.precio()
+	}
+	method esComida() { return true }
+	method esElectrodomestico() { return false }
+}
+
+object packRegalo {
+	var packLoQSea = []
+	
+	method agregarAlPack(objeto) {
+		packLoQSea.add(objeto)
+	}
+	method precio() {
+		return packLoQSea.sum {a => a.precio()}*0.8
+	}
+	method esComida() {
+		return packLoQSea.all { a => a.esComida() }
+	}
+	method esElectrodomestico() {
+		return packLoQSea.any { a => a.esElectrodomestico() }
+	}
 }
 
 

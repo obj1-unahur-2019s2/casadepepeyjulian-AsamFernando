@@ -29,8 +29,15 @@ Agregar las siguientes cosas que pueden comprarse:
 - un microondas: 4200 pesos.
 - un kilo de cebollas: 25 pesos.
 - una compu: 500 dólares. Para saber el precio en pesos, multiplicar por la cotización del dólar. Agregar un objeto `dolar` al que se le pueda preguntar la `cotizacion()`. 
-- un "pack comida" que incluye un plato (que puede ser tira de asado, fideos o milanesas) y un aderezo (que puede ser la botella de salsa de tomates o el kilo de cebollas). Precio: la suma del precio de sus componentes.
-- un "pack regalo" que incluye una cantidad arbitraria de componentes. Se considera comida si todos sus componentes son comida, se considera electrodoméstico si al menos uno de los componentes es electrodoméstico. El precio es la suma del precio de todos sus componentes, con un descuento del 20%. 
+- un "pack comida" que incluye un plato (que puede ser tira de asado,
+ fideos o milanesas) y un aderezo (que puede ser la botella de 
+ salsa de tomates o el kilo de cebollas). Precio: la suma del 
+ precio de sus componentes.
+- un "pack regalo" que incluye una cantidad arbitraria de componentes.
+ Se considera comida si todos sus componentes son comida, se 
+ considera electrodoméstico si al menos uno de los componentes 
+ es electrodoméstico. El precio es la suma del precio de todos 
+ sus componentes, con un descuento del 20%. 
 
 **Pregunta**  
 para lograr que la casa pueda comprar estas cosas nuevas, ¿qué hubo que cambiar en la definición del objeto que representa la casa? Si hay que tocar poco, o nada, ¿qué concepto nos ayuda?
@@ -38,11 +45,18 @@ para lograr que la casa pueda comprar estas cosas nuevas, ¿qué hubo que cambia
 
 ## Más consultas sobre la casa
 Agreguemos algunas consultas más para hacerse a la casa
-- `gastoEnComida()`: el precio total de _la comida_ comprada por la casa. O sea, hay que contemplar solamente las cosas que son comida. 
-- `hayElectrodomesticosBaratos()`: indica si la casa compró, al menos, un electrodoméstico de menos de 3000 pesos.
-- `preciosDeElectrodomesticos()`: una colección con **el precio** de cada electrodoméstico que compró la casa. P.ej. si la casa compró la heladera, la tira de asado, la plancha, el microondas y el kilo de cebollas, entonces el resultado debe ser `[20000, 1200, 4200]`. 
-- `nivelEnAumento()`: indica si el precio de la última cosa comprada es el doble del precio de la primera, o más.
-- `primeraComidaComprada()`: devuelve la primer cosa que se compró que es comida. 
+- `gastoEnComida()`: el precio total de _la comida_ comprada por la 
+casa. O sea, hay que contemplar solamente las cosas que son comida. 
+- `hayElectrodomesticosBaratos()`: indica si la casa compró, 
+al menos, un electrodoméstico de menos de 3000 pesos.
+- `preciosDeElectrodomesticos()`: una colección con **el precio** 
+de cada electrodoméstico que compró la casa. P.ej. si la casa compró la heladera, 
+la tira de asado, la plancha, el microondas y el kilo de cebollas,
+ entonces el resultado debe ser `[20000, 1200, 4200]`. 
+- `nivelEnAumento()`: indica si el precio de la última cosa comprada
+ es el doble del precio de la primera, o más.
+- `primeraComidaComprada()`: devuelve la primer cosa que se compró 
+que es comida. 
 
 ## Cuenta bancaria
 Agreguemos al modelo objetos que representan diferentes _cuentas bancarias_. Estos objetos deben entender tres mensajes: `depositar(importe)`, `extraer(importe)`, y `saldo()`. 
