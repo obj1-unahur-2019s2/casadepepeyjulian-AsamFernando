@@ -90,6 +90,51 @@ object packRegalo {
 	}
 }
 
+object cuentaCorriente {
+	var saldo=0
+	method depositar(importe) {
+		saldo+=importe
+	}
+	method extraer(importe) {
+		saldo-=importe
+	}
+	method saldo() { return saldo }
+}
+
+
+object cuentaConGastos {
+	var saldo=0
+	method depositar(importe) {
+		saldo+=importe-20
+	}
+	method extraer(importe) {
+		if (importe<=1000) {
+			saldo-=importe+20
+		}
+		else {
+			saldo-=importe*1.02
+		}
+	}
+	method saldo() { return saldo }
+}
+
+
+object cuentaCombinada {
+	var saldoPrimario=0
+	var saldoSecundario=0
+	method depositar(importe) {
+		saldoPrimario+=importe
+	}
+	method extraer(importe) {
+		if (importe<=saldoPrimario) {
+			saldoPrimario-=importe
+		}
+		else {
+			saldoSecundario-=importe
+		}
+	}
+	method saldo() { return saldoPrimario+saldoSecundario }
+}
 
 
 

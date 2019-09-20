@@ -43,7 +43,7 @@ object casaDePepeYJulian {
 	method preciosDeElectrodomesticos() {
 		return cosas.filter({ cosa => cosa.esElectrodomestico() }).map({ cosa => cosa.precio() })
 	}
-	method niverDeAumento() {
+	method nivelDeAumento() {
 		return cosas.last().precio()>=cosas.first().precio()*2
 	}
 	method primeraComidaComprada() {
